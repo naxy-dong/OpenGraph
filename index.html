@@ -1,11 +1,12 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/calculator">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="open-source,open,graphing,calculator,graphing calculator,open source,free,open graph,opengraphingcalculator,free graphing calculator">
+    <meta name="keywords"
+        content="open-source,open,graphing,calculator,graphing calculator,open source,free,open graph,opengraphingcalculator,free graphing calculator">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- (John Redden: jtredden@gmail.com  and Paul Gonzalez-Becerra: pgonzbecer@gmail.com)-->
     <title>Open Graphing Calculator</title>
@@ -51,7 +52,7 @@
     <script type="text/javascript" src="js/OpenGraph.js"></script>
     <script type="text/javascript" src="js/OpenGraphAppEntry.js"></script>
     <script type="text/javascript" src="js/mathConvert.js"></script>
-	<script type="text/javascript" src="js/renderMath.js"></script>
+    <script type="text/javascript" src="js/renderMath.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,15 +61,12 @@
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <div id="myBox" class="jxgbox" style="position:absolute; width:100px; height:100px;"></div>
 
-    <div class="container-fluid noselect" id="top-header" style="top: 0px; background-color:black; opacity:0.5; ">
-        <h4 id="header" class="pull-left" style="color:white"><em>placeholder</em></h4>
-        <div id="info" class="glyphicon glyphicon-info-sign pull-right" style="color:white;top:10px" title="Info" data-toggle="tooltip" data-placement="bottom"></div>
-        <div id="help" class="glyphicon glyphicon-question-sign pull-right" style="color:white;top:10px" title="Help" data-toggle="tooltip" data-placement="bottom">&nbsp;</div>
-
-    </div>
+    <div id="help" class="glyphicon glyphicon-question-sign pull-right" style="color:black;top:10px" title="Help"
+        data-toggle="tooltip" data-placement="bottom">&nbsp;</div>
 
     <div class="btn-group" id="entry-tools" style="position: absolute; top: 45px; left:10px">
         <div id="deleteAll" class="btn btn-default" title="Delete All" data-toggle="tooltip" data-placement="bottom">
@@ -89,40 +87,52 @@
 
             <span class="grabber"></span>
             <span class="btn-group-vertical spcLeft">
-                <span class="btn btn-default btn-remove" title="Remove"> <span class="glyphicon glyphicon-remove"></span> </span>
-                <span class="btn btn-default drawer1" title="Toggle Extras"><span class="glyphicon glyphicon-import"></span></span>
+                <span class="btn btn-default btn-remove" title="Remove"> <span
+                        class="glyphicon glyphicon-remove"></span> </span>
+                <span class="btn btn-default drawer1" title="Toggle Extras"><span
+                        class="glyphicon glyphicon-import"></span></span>
             </span>
             <span class="btn-group-vertical  spcLeft">
-                <span class="btn btn-default map" title="Add Point"> <span class="glyphicon glyphicon-map-marker"></span> </span>
-                <span class="dashed btn btn-default" title="Dashed" style="color:LightGray;"><span class="glyphicon glyphicon-option-horizontal"></span></span>
+                <span class="btn btn-default map" title="Add Point"> <span
+                        class="glyphicon glyphicon-map-marker"></span> </span>
+                <span class="dashed btn btn-default" title="Dashed" style="color:LightGray;"><span
+                        class="glyphicon glyphicon-option-horizontal"></span></span>
             </span>
             <span class="mathinput">
                 <span class="math-field"></span>
             </span>
             <span class="btn-group-vertical spcLeft">
-                <span class="collapse-entry btn btn-default" title="Collapse Entry"><span class="glyphicon glyphicon-menu-left"></span></span>
-                <span class="showColor btn btn-default" title="Toggle Color"><span class="glyphicon glyphicon-tint"></span></span>
+                <span class="collapse-entry btn btn-default" title="Collapse Entry"><span
+                        class="glyphicon glyphicon-menu-left"></span></span>
+                <span class="showColor btn btn-default" title="Toggle Color"><span
+                        class="glyphicon glyphicon-tint"></span></span>
             </span>
             <span class="collapse hiddenRow basic">
                 <span class="btn-group">
                     <span class="btn btn-default disabled">Size:</span>
 
-                    <span class="btn btn-default thicknessPlus" title="Increase Thickness"><span class="glyphicon glyphicon-plus"></span></span>
-                    <span class="btn btn-default thicknessMinus" title="Decrease Thickness"><span class="glyphicon glyphicon-minus"></span></span>
-                    <span class="btn btn-default drawer2" title="Toggle Extras"><span class="glyphicon glyphicon-import"></span>Calculus</span>
+                    <span class="btn btn-default thicknessPlus" title="Increase Thickness"><span
+                            class="glyphicon glyphicon-plus"></span></span>
+                    <span class="btn btn-default thicknessMinus" title="Decrease Thickness"><span
+                            class="glyphicon glyphicon-minus"></span></span>
+                    <span class="btn btn-default drawer2" title="Toggle Extras"><span
+                            class="glyphicon glyphicon-import"></span>Calculus</span>
                     <!--  might give up on zeros for now.
                     <span class="btn btn-default roots"><span class="">0s</span></span>
                     -->
                 </span>
                 <span class="collapse hiddenRow calc">
                     <span class="btn-group">
-                        <span class="btn btn-default tangentLine" title="Tangent Line"><span class="">f '(a)</span></span>
+                        <span class="btn btn-default tangentLine" title="Tangent Line"><span class="">f
+                                '(a)</span></span>
                         <span class="btn btn-default derivative" title="Derivative"><span class="">f '</span></span>
-                        <span class="btn btn-default secondDerivative" title="Second Derivative"><span class="">f ''</span></span>
+                        <span class="btn btn-default secondDerivative" title="Second Derivative"><span class="">f
+                                ''</span></span>
                         <span class="btn btn-default integral" title="Integral"><span class="">&int; f</span></span>
                         <span class="btn btn-default rSum" title="Riemann Sum"><span class=""> &sum; f</span> </span>
                         <span class="dropdown btn-group" style="display:inline">
-                            <button class="btn btn-default dropdown-toggle endpointBtn" type="button" data-toggle="dropdown">
+                            <button class="btn btn-default dropdown-toggle endpointBtn" type="button"
+                                data-toggle="dropdown">
                                 <span class="menuTxt">right</span>
                                 <span class="caret"></span>
                             </button>
@@ -150,7 +160,8 @@
                             </span>
                             <span class="rangeGroup pull-left spcLeft">
                                 <span> n: </span>
-                                <input type="range" class="nSlider" min="1" max="100" step="1" value="10" style="width:120px; display:inline" />
+                                <input type="range" class="nSlider" min="1" max="100" step="1" value="10"
+                                    style="width:120px; display:inline" />
                                 <span class="nDisplay"> 10 </span>
                             </span>
 
@@ -167,28 +178,40 @@
 
     <!-- Paper Zoom Controls uses Bootstrap Buttons-->
     <div id="graphPaperButtons" class="controlContainer">
-        <div id="dockButton" class="btn btn-default pull-left" title="Dock Right" style="height: 100%;" data-toggle="tooltip" data-placement="bottom">
+        <div id="dockButton" class="btn btn-default pull-left" title="Dock Right" style="height: 100%;"
+            data-toggle="tooltip" data-placement="bottom">
             <span class="glyphicon glyphicon-menu-right"></span>
         </div>
         <div class="buttons pull-right">
             <div class="btn-group" style="width:100%">
-                <div id="resetHome" class="btn btn-default" title="Reset Home" style="width:50%" data-toggle="tooltip" data-placement="bottom"><div class="glyphicon glyphicon-screenshot"></div></div>
-                <div id="resetZoom" class="btn btn-default" title="Reset Zoom" style="width:50%" data-toggle="tooltip" data-placement="bottom"><div class="glyphicon glyphicon-fullscreen"></div></div>
+                <div id="resetHome" class="btn btn-default" title="Reset Home" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom">
+                    <div class="glyphicon glyphicon-screenshot"></div>
+                </div>
+                <div id="resetZoom" class="btn btn-default" title="Reset Zoom" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom">
+                    <div class="glyphicon glyphicon-fullscreen"></div>
+                </div>
             </div>
             <br />
-            <div id="toggleZoomType" class="btn btn-default" title="Toggle Zoom Type" style="width:100%" data-toggle="tooltip" data-placement="bottom">
+            <div id="toggleZoomType" class="btn btn-default" title="Toggle Zoom Type" style="width:100%"
+                data-toggle="tooltip" data-placement="bottom">
                 <span class="glyphicon glyphicon-zoom-in" title="zoom type"></span>
                 <span id="zoomType" style="font-family:'Courier New', Courier, monospace">xy</span>
             </div>
             <br />
             <div class="btn-group" style="width:100%">
-                <div id="zoomIn" class="btn btn-default" title="Zoom in" style="width:50%" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-zoom-in"></span></div>
-                <div id="zoomOut" class="btn btn-default" title="Zoom out" style="width:50%" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-zoom-out"></span></div>
+                <div id="zoomIn" class="btn btn-default" title="Zoom in" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom"><span class="glyphicon glyphicon-zoom-in"></span></div>
+                <div id="zoomOut" class="btn btn-default" title="Zoom out" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom"><span class="glyphicon glyphicon-zoom-out"></span></div>
             </div>
             <br />
             <div class="btn-group" style="width:100%">
-                <div id="print" class="btn btn-default" title="Print" style="width:50%" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-print"></span></div>
-                <div id="share" class="btn btn-default" title="Share" style="width:50%" data-toggle="tooltip" data-placement="bottom"><span class="glyphicon glyphicon-share"></span></div>
+                <div id="print" class="btn btn-default" title="Print" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom"><span class="glyphicon glyphicon-print"></span></div>
+                <div id="share" class="btn btn-default" title="Share" style="width:50%" data-toggle="tooltip"
+                    data-placement="bottom"><span class="glyphicon glyphicon-share"></span></div>
             </div>
         </div>
     </div>
@@ -203,42 +226,54 @@
                 </div>
                 <div class="modal-body">
                     <input type="text" id="urlbox" value="NOTHING, AHAHAHA" style="width: 100%;" /><br /><br />
-					<input type="radio" name="urltype" class="encodable" id="encodeNorm" alt="Text Only ( Recommended )" checked="true" /> Text Only ( Recommended )&emsp;
-					<input type="radio" name="urltype" class="encodable" id="encodeIframe" alt="iFrame ( For Embedding )" /> iFrame ( For Embedding )&emsp;
-					<input type="radio" name="urltype" class="encodable" id="encodeFull" alt="Full ( Beta )" /> Full ( Beta )&emsp;
-					<input type="radio" name="urltype" class="encodable" id="encodeIframeFull" alt="iFrame Full ( For Embedding [ Beta ] )" /> iFrame Full ( For Embedding [ Beta ] )&emsp;
-					<br /><br />
-					<div id="descNorm" class="sharedesc">
-						The text only url link returns only what is written on each entry, and will display whatever is written onto the entries
-					</div>
-					<div id="descFull" class="sharedesc" style="display: none;">
-						The full url link returns not only the text but everything else that could be associated with the graph.
-						So it can return the color used, if it was dashed, any calculus stuff, trace points, etc.<br />
-						<span style="color: crimson; font-size: 12px;">
-							[ NOTE: Although it is still in the works and trace points don't seem to function too well, plus
-							the calculus things tend to not be friendly with each other ]
-						</span>
-					</div>
-					<div id="descIframe" class="sharedesc" style="display: none;">
-						This is used to embed this web app onto other websites.
-					</div>
-					<div id="descIframeFull" class="sharedesc" style="display: none;">
-						This is used to embed this web app onto other websites, while also using the full url link. Which not only
-						graphs the text given, but everything else that could be associated with the graph. So it can return the
-						color used, if it was dashed, any calculus stuff, trace points, etc.<br />
-						<span style="color: crimson; font-size: 12px;">
-							[ NOTE: Although it is still in the works and trace points don't seem to function too well, plus
-							the calculus things tend to not be friendly with each other ]
-						</span>
-					</div>
-					<div id="iframeStuffs" class="sharedesc" style="display: none;">
-						<br />
-						<input type="checkbox" id="includeButton" class="encodable" />&emsp;Display Button Link<br />
-						<div id="buttonStuffs" style="display: none;">
-							<input type="checkbox" id="isButtonTop"  class="encodable">&emsp;Is the button placed on the top?<br/>
-							Button Text: <input type="text" id="buttonText" class="encodable" value="Open in OpenGraphingCalculator.com" style="width: 75%;"/>
-						</div>
-					</div>
+                    <input type="radio" name="urltype" class="encodable" id="encodeNorm" alt="Text Only ( Recommended )"
+                        checked="true" /> Text Only ( Recommended )&emsp;
+                    <input type="radio" name="urltype" class="encodable" id="encodeIframe"
+                        alt="iFrame ( For Embedding )" /> iFrame ( For Embedding )&emsp;
+                    <input type="radio" name="urltype" class="encodable" id="encodeFull" alt="Full ( Beta )" /> Full (
+                    Beta )&emsp;
+                    <input type="radio" name="urltype" class="encodable" id="encodeIframeFull"
+                        alt="iFrame Full ( For Embedding [ Beta ] )" /> iFrame Full ( For Embedding [ Beta ] )&emsp;
+                    <br /><br />
+                    <div id="descNorm" class="sharedesc">
+                        The text only url link returns only what is written on each entry, and will display whatever is
+                        written onto the entries
+                    </div>
+                    <div id="descFull" class="sharedesc" style="display: none;">
+                        The full url link returns not only the text but everything else that could be associated with
+                        the graph.
+                        So it can return the color used, if it was dashed, any calculus stuff, trace points, etc.<br />
+                        <span style="color: crimson; font-size: 12px;">
+                            [ NOTE: Although it is still in the works and trace points don't seem to function too well,
+                            plus
+                            the calculus things tend to not be friendly with each other ]
+                        </span>
+                    </div>
+                    <div id="descIframe" class="sharedesc" style="display: none;">
+                        This is used to embed this web app onto other websites.
+                    </div>
+                    <div id="descIframeFull" class="sharedesc" style="display: none;">
+                        This is used to embed this web app onto other websites, while also using the full url link.
+                        Which not only
+                        graphs the text given, but everything else that could be associated with the graph. So it can
+                        return the
+                        color used, if it was dashed, any calculus stuff, trace points, etc.<br />
+                        <span style="color: crimson; font-size: 12px;">
+                            [ NOTE: Although it is still in the works and trace points don't seem to function too well,
+                            plus
+                            the calculus things tend to not be friendly with each other ]
+                        </span>
+                    </div>
+                    <div id="iframeStuffs" class="sharedesc" style="display: none;">
+                        <br />
+                        <input type="checkbox" id="includeButton" class="encodable" />&emsp;Display Button Link<br />
+                        <div id="buttonStuffs" style="display: none;">
+                            <input type="checkbox" id="isButtonTop" class="encodable">&emsp;Is the button placed on the
+                            top?<br />
+                            Button Text: <input type="text" id="buttonText" class="encodable"
+                                value="Open in OpenGraphingCalculator.com" style="width: 75%;" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -264,13 +299,16 @@
                         <ul>
                             <li>Drag to Pan</li>
                             <li>Mouse Wheel to Zoom</li>
-                            <li><kbd><span class="glyphicon glyphicon-map-marker"></span></kbd> Trace points are draggable (trace).</li>
+                            <li><kbd><span class="glyphicon glyphicon-map-marker"></span></kbd> Trace points are
+                                draggable (trace).</li>
                             <li>Right click to remove trace points.</li>
-							<li>Type in an <kbd>h</kbd> when finished creating a trigonometry function to turn it into it's hyperbolic form</li>
+                            <li>Type in an <kbd>h</kbd> when finished creating a trigonometry function to turn it into
+                                it's hyperbolic form</li>
                             <li>Type <kbd>(3,2)</kbd> to plot a point (movable).</li>
                             <li>Type <kbd>line AB</kbd> to graph a line through points A and B.</li>
                             <li>Type <kbd>segment AB</kbd> to graph line segment AB.</li>
-							<li>Type <kbd>sector ABC</kbd> to graph a sector of a circle with center A, and endpoints B and C</li>
+                            <li>Type <kbd>sector ABC</kbd> to graph a sector of a circle with center A, and endpoints B
+                                and C</li>
                             <li>Type <kbd>circle AB</kbd> to graph a circle with center A through B.</li>
                             <li>Type <kbd>parabola ABC</kbd> with focus A and line through B and C.</li>
                             <li>Type <kbd>ellipse ABC</kbd> with foci A and B through C.</li>
@@ -281,20 +319,24 @@
                             <li>Type <kbd>x = 3</kbd> for draggable vertical line (VLT).</li>
                             <li>Conic Sections through points are dynamic.</li>
                             <li>Conic Sections are constrained using trace points.</li>
-                            <li>Type <kbd>f(x)=</kbd> to define functions. Note: You can type any name with (x) at the end of it to make it into a defined function</li>
+                            <li>Type <kbd>f(x)=</kbd> to define functions. Note: You can type any name with (x) at the
+                                end of it to make it into a defined function</li>
                             <li>Type <kbd>f(3)</kbd> to evaluate functions.</li>
                             <li>Calculus operations are dynamic as well.</li>
                             <li>Hit refresh to start over. :)</li>
                             <li>More capabilities coming soon.</li>
                         </ul>
-                       
+
                     </div>
                     <p>
-                        <strong><em>Open Graphing Calculator</em></strong> is an open source project, feel free to fork the source on GitHub, submit issues, and contribute.
+                        <strong><em>Open Graphing Calculator</em></strong> is an open source project, feel free to fork
+                        the source on GitHub, submit issues, and contribute.
                     </p>
                     <div class="text-center center-block">
-                        <a class="btn btn-default" href="https://github.com/johnRedden/OpenGraph" target="_blank">Source On GitHub</a>
-                        <a class="btn btn-default" href="https://github.com/johnRedden/OpenGraph/issues" target="_blank">Submit an Issue</a>
+                        <a class="btn btn-default" href="https://github.com/johnRedden/OpenGraph" target="_blank">Source
+                            On GitHub</a>
+                        <a class="btn btn-default" href="https://github.com/johnRedden/OpenGraph/issues"
+                            target="_blank">Submit an Issue</a>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -309,7 +351,7 @@
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-64637382-1', 'auto');
@@ -318,4 +360,5 @@
     </script>
 
 </body>
+
 </html>
